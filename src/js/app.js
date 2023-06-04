@@ -1,4 +1,4 @@
-import { menuDropDown } from "./modules/_menuDropdown.js";
+import { menuDropDown } from "./modules/menuDropdown.js";
 
 const run = () => {
     menuDropDown();
