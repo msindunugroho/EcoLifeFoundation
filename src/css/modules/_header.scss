@@ -1,0 +1,190 @@
+header{
+    width: 100%;
+    height: max-content;
+    background-color: whitesmoke;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.466);
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 10;
+
+    .menu-dropdown {
+        display: none;
+    }
+   
+    nav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .brand {
+            flex: 1;
+            height: 50px;
+
+            img {
+                height: 100%;
+            }
+        }
+        .nav-bar {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex: 3;
+            justify-content: center;
+            gap: 0 30px;
+            a {
+                font-size: 16px;
+                color: rgb(34, 34, 34);
+                padding: 15px 10px;
+                border-radius: 4px;
+                font-weight: 500;
+                text-decoration: none;
+                transition: .3s cubic-bezier(0.1, 0.49, 0.48, 0.88);
+
+                &:hover {
+                    background-color: rgb(226, 226, 226);
+                }
+            }
+
+        }
+        .loging {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+
+            .sign-in,
+            .btn {
+                font-size: 16px;
+                color: rgb(42, 160, 56) !important;
+                border: 1px solid rgb(42, 160, 56);
+                padding: 10px 12px;
+                border-radius: 7px;
+                font-weight: 600;
+                text-decoration: none; 
+                transition: .3s cubic-bezier(0.1, 0.49, 0.48, 0.88);
+
+                &:hover {
+                    background-color: rgb(42, 160, 56);
+                    color: whitesmoke !important;
+
+                }
+
+            }
+
+        }
+    }
+}
+
+
+
+
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    header {
+        padding: 10px;
+        nav {
+            .nav-bar {
+                gap: 0 5px;
+            }
+            .loging {
+                .light-green {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    header {
+        padding: 0;
+        .menu-dropdown{
+            background-color: whitesmoke;
+            padding: 5px 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .icon {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+
+                .material-symbols-rounded {
+                    font-size: 30px;
+                    background-color: rgb(231, 255, 233) ;
+                    color: rgb(42, 160, 56);
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: 1px solid rgb(42, 160, 56);
+
+                }
+            }
+
+            .brand {
+                flex: 1;
+                height: 50px;
+    
+                img {
+                    height: 100%;
+                }
+            }
+            
+
+        }
+        nav {
+            .brand {
+                display: none;
+
+            }
+
+            .nav-bar {
+                transition: .3s cubic-bezier(0.1, 0.49, 0.48, 0.88);
+                margin-top: -50px;
+                flex: 5;
+            }
+            .loging{
+                transition: .3s cubic-bezier(0.1, 0.49, 0.48, 0.88);
+                margin-top: -50px;
+                justify-content: center;
+            }
+            
+        }
+    }
+}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    header {
+        .menu-dropdown {
+            .icon{
+                .material-symbols-rounded{
+                    font-size: 20px;
+                    padding: 4px;
+                }
+            }
+        }
+        nav {
+            .nav-bar {
+                gap: 0 2px;
+                a {
+                    font-size: 12px;
+                    font-weight: 600;
+                    padding: 10px 7px;
+                }
+            }
+            .loging {
+                display: none;
+            }
+        }
+    }
+
+}

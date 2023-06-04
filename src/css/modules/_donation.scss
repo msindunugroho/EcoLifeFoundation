@@ -1,0 +1,164 @@
+main {
+    #donation {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px 0;
+
+        .title {
+            width: 100%;
+            height: max-content;
+            text-align: center;
+            text-transform: capitalize;
+
+            p:first-child {
+                font-size: 35px;
+                color: black;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+
+            p:last-child {
+                font-size: 18px;
+                color: grey;
+            }
+        }
+
+       .container {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+        .card {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            color: rgb(42, 160, 56);
+            text-align: center;
+            transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            padding: 15px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 25px 0;
+            overflow: hidden;
+            box-shadow: 0 0 8px -6px black;
+
+            &:hover {
+                transform: scale(1.05);
+                color: white;
+                background-color: rgba(240, 248, 255, 0);
+            }
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: rgb(42, 160, 56);
+                position: absolute;
+                inset: 210px 0 0 0;
+                transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                z-index: -1;
+            }
+            &:hover::before {
+                inset: 0 0 0 0;
+            }
+
+            span {
+                font-size: 30px;
+            }
+        }
+       }
+    }
+}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    main {
+        #donation {
+            .container {
+                gap: 20px;
+                .card {
+                    width: 170px;
+                    height: 170px;
+                    padding: 12px;
+                    border-radius: 9px;
+                }
+            }
+        }
+    }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    main {
+        #donation {
+            .title {
+                p:first-child {
+                    font-size: 20px;
+                    margin-bottom: 7px;
+                }
+                p:last-child {
+                    font-size: 16px;
+                }
+            }
+
+            .container {
+                .card {
+                    width: 150px;
+                    height: 150px;
+                    span {
+                        font-size: 25px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    main {
+        #donation {
+            .title {
+                p:first-child {
+                    font-size: 20px;
+                    margin-bottom: 7px;
+                }
+                p:last-child {
+                    font-size: 16px;
+                }
+            }
+
+            .container {
+                gap: 10px;
+                .card {
+                    padding: 5px;
+                    width: 120px;
+                    height: 120px;
+                    span {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@use "./modules/header";
+@use "./modules/button";
+@use "./modules/main";
+@use "./modules/jumbotron";
+@use "./modules/charity";
+@use "./modules/donation";
+@use "./modules/overview";
+@use "./modules/profile";
+@use "./modules/footer";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(237, 255, 239);
+}
+
+/*# sourceMappingURL=main.scss.map */

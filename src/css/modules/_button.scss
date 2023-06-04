@@ -1,0 +1,84 @@
+a.btn {
+    width: max-content;
+    height: max-content;
+    padding: 10px 12px;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    border: 1.5px solid rgb(42, 160, 56);
+    font-weight: 600 !important;
+    color: rgb(34, 34, 34) !important;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgb(42, 160, 56);
+        transform: rotate(30deg);
+        transition: .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        position: absolute;
+        top: 40px;
+        bottom: 0;
+        right: 0;
+        left: -70px;
+        z-index: -2;
+    }
+    
+    &::after {
+        content: "";
+        width: 100%;
+        height: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        transform: rotate(30deg);
+        transition: .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) .2s;
+        position: absolute;
+        top: 40px;
+        bottom: 0;
+        right: 0;
+        left: -70px;
+    
+        z-index: -2;
+
+    }
+
+
+    &:hover {
+        transform: scale(1.1);
+        color: rgb(231, 255, 233) !important;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+
+    }
+    &:hover::before {
+        transform: scale(2.7) rotate(30deg);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    &:hover::after {
+        transform: rotate(30deg);
+        inset: -27px 0px 0px 62px;
+
+    }
+}
+
+a.light-green {
+    background-color: rgb(231, 255, 233);
+}
+a.transparent {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(42, 160, 56) !important;
+
+}
+
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    a.btn {
+        padding: 5px 6px;
+        font-size: 14px !important;
+        font-weight: normal;
+    }
+}

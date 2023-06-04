@@ -1,0 +1,222 @@
+main {
+  #overview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px 0;
+
+    .title {
+      width: 100%;
+      height: max-content;
+      text-align: center;
+      text-transform: capitalize;
+
+      p:first-child {
+        font-size: 35px;
+        color: black;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      p:last-child {
+        font-size: 18px;
+        color: grey;
+      }
+    }
+
+    .container {
+      width: 100%;
+      height: 570px;
+      padding: 30px;
+      overflow: hidden;
+      background-color: #f5f5f5;
+      border-radius: 25px;
+      box-shadow: 0 0 8px -6px black;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .overview-img {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        img {
+          width: max-content;
+          height: 100%;
+        }
+      }
+      .overview-body {
+        width: 50%;
+        height: 100%;
+        padding-left: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 3px;
+          height: 85%;
+          margin: auto 0;
+          background-color: grey;
+          position: absolute;
+          inset: 0 0 0 0;
+        }
+
+        .card {
+          width: 190px;
+          height: 190px;
+          padding: 15px;
+          border-radius: 15px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          position: relative;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 15px 0;
+          overflow: hidden;
+          transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          box-shadow: 0 0 8px -6px black;
+          cursor: pointer;
+
+          &:first-child {
+            background-image: url("./../img/kebakaran-hutan.jpeg");
+          }
+          &:nth-child(2) {
+            background-image: url("./../img/penangkaran-hewan.jpg");
+          }
+          &:nth-child(3) {
+            background-image: url("./../img/gizi-buruk.jpg");
+          }
+          &:last-child {
+            background-image: url("./../img/sungai-tercemar.jpg");
+          }
+
+          &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(42, 160, 56, 0.5);
+            position: absolute;
+            inset: 0 0 0 0;
+            transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          }
+
+          &:hover {
+            transform: scale(1.1);
+          }
+          &:hover::before {
+            background-color: rgba(42, 160, 56, 0.8);
+          }
+
+          p {
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  main {
+    #overview {
+      .container {
+        height: 450px;
+        padding: 10px;
+
+        .overview-img {
+          img {
+            width: max-content;
+            height: 90%;
+          }
+        }
+        .overview-body {
+          padding-left: 10px;
+
+          .card {
+            width: 140px;
+            height: 140px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  main {
+    #overview {
+      .title {
+        p:first-child {
+            font-size: 20px;
+            margin-bottom: 7px;
+        }
+        p:last-child {
+            font-size: 16px;
+        }
+    }
+    .container {
+      height: max-content;
+      flex-direction: column;
+      gap: 20px 0;
+
+      .overview-img {
+        width: 100%;
+        height: 252px;
+
+        img {
+          width: max-content;
+          height: 98%;
+        }
+      }
+
+      .overview-body{
+        width: 100%;
+        height: 38%;
+        flex-direction: row;
+
+        &::before {
+          display: none;
+        }
+
+        .card {
+          width: 95px;
+          height: 95px;
+          padding: 5px;
+
+          p{
+            font-size: 12px;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+    }
+  }
+  
+}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+}
