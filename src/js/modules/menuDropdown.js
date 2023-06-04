@@ -9,12 +9,12 @@ export const menuDropDown = () => {
         if(!dropDown) {
             navBar.style.marginTop="0px";
             loging.style.marginTop="0px";
-            main.style.padding="130px 40px 80px 40px";
+            main.style.padding="130px 10px 80px 10px";
             dropDown = true;
         } else {
             navBar.style.marginTop="-50px";
             loging.style.marginTop="-50px";
-            main.style.padding="80px 40px";
+            main.style.padding="80px 10px";
             dropDown = false;
         }
     })

@@ -15,6 +15,7 @@ main {
 // `md` applies to small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
     main {
+        padding: 80px 10px;
         gap: 120px;
     }
 }
@@ -22,7 +23,6 @@ main {
 // `sm` applies to x-small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
     main {
-        padding: 75px 10px;
         gap: 100px;
     }
 }
