@@ -1,27 +1,27 @@
 header{
     width: 100%;
     height: max-content;
-    background-color: whitesmoke;
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.466);
+    background-color: whitesmoke;
     padding: 10px 20px;
     position: fixed;
     z-index: 10;
 
-    .menu-dropdown {
-        display: none;
-    }
-   
     nav {
         width: 100%;
         height: 100%;
+        background-color: whitesmoke;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        position: relative;
 
         .brand {
-            flex: 1;
+            width: max-content;
             height: 50px;
+            flex: 1;
+            position: relative;
 
             img {
                 height: 100%;
@@ -33,6 +33,10 @@ header{
             flex: 3;
             justify-content: center;
             gap: 0 30px;
+            position: relative;
+            background-color: whitesmoke;
+            transition: .3s cubic-bezier(0.1, 0.49, 0.48, 0.88);
+
             a {
                 font-size: 16px;
                 color: rgb(34, 34, 34);
@@ -55,6 +59,7 @@ header{
             align-items: center;
             gap: 8px;
             flex: 1;
+            position: relative;
 
             .sign-in,
             .btn {
@@ -76,6 +81,19 @@ header{
             }
 
         }
+        .dropdown-menu {
+            display: none;
+            position: relative;
+            padding-right: 5px;
+
+            .material-symbols-rounded {
+                padding: 3px;
+                background-color: rgb(231, 255, 233);
+                border: 1px solid rgb(42, 160, 56);
+                color: rgb(42, 160, 56);
+                border-radius: 5px;
+            }
+        }
     }
 }
 
@@ -85,16 +103,31 @@ header{
 
 // `xl` applies to large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
+   header {
+    nav {
+        .loging {
+            .btn {
+                display: none;
+            }
+        }
+    }
+   }
+}
+
+@media (max-width: 1000.99px) {
     header {
-        padding: 10px;
         nav {
+            .brand {
+                flex: none;
+                width: max-content;
+            }
             .nav-bar {
-                gap: 0 5px;
+                flex: none;
+                width: max-content;
             }
             .loging {
-                .light-green {
-                    display: none;
-                }
+                flex:none;
+                width: max-content;
             }
         }
     }
@@ -103,88 +136,45 @@ header{
 // `md` applies to small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
     header {
-        padding: 0;
-        .menu-dropdown{
-            background-color: whitesmoke;
-            padding: 5px 20px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-
-            .icon {
-                flex: 1;
-                display: flex;
-                justify-content: flex-end;
-
-                .material-symbols-rounded {
-                    font-size: 30px;
-                    background-color: rgb(231, 255, 233) ;
-                    color: rgb(42, 160, 56);
-                    padding: 5px;
-                    border-radius: 5px;
-                    border: 1px solid rgb(42, 160, 56);
-
-                }
-            }
-
-            .brand {
-                flex: 1;
-                height: 50px;
-    
-                img {
-                    height: 100%;
-                }
-            }
-            
-
-        }
+        padding: 3px 0px;
         nav {
             .brand {
-                display: none;
-
+                margin-left: 5px;
             }
-
             .nav-bar {
-                transition: .3s cubic-bezier(0.1, 0.49, 0.48, 0.88);
-                margin-top: -50px;
-                flex: 5;
-            }
-            .loging{
-                transition: .3s cubic-bezier(0.1, 0.49, 0.48, 0.88);
-                margin-top: -50px;
-                justify-content: center;
-            }
-            
-        }
-    }
-}
+                width: 100%;
+                z-index: -1;
+                position: absolute;
+                margin-top: 0px;
 
-// `sm` applies to x-small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-    header {
-        .menu-dropdown {
-            .icon{
-                .material-symbols-rounded{
-                    font-size: 20px;
-                    padding: 4px;
-                }
-            }
-        }
-        nav {
-            .nav-bar {
-                gap: 0 2px;
-                a {
-                    font-size: 12px;
-                    font-weight: 600;
-                    padding: 10px 7px;
-                }
+
             }
             .loging {
                 display: none;
             }
+            .dropdown-menu {
+                display: block;
+
+                
+            }
         }
     }
+    
+    
+}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+   header {
+    nav {
+        .nav-bar {
+            gap: 0 5px;
+            a {
+                font-size: 12px;
+                font-weight: 600;
+            }
+        }
+    }
+   }
 
 }

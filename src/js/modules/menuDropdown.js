@@ -1,21 +1,22 @@
 export const menuDropDown = () => {
     let dropDown = false;
+
     const dropDownIcon = document.getElementById("dropDownIcon");
-    const main = document.getElementById("main");
     const navBar = document.getElementsByClassName("nav-bar")[0];
-    const loging = document.getElementsByClassName("loging")[0];
+    const main = document.getElementById("main");
 
     dropDownIcon.addEventListener("click", () => {
         if(!dropDown) {
-            navBar.style.marginTop="0px";
-            loging.style.marginTop="0px";
-            main.style.padding="130px 10px 80px 10px";
+            navBar.style.marginTop="100px";
+            navBar.style.boxShadow="0px 1px 1px 0px rgba(0, 0, 0, 0.3)";
+            main.style.padding="125px 10px";
             dropDown = true;
         } else {
-            navBar.style.marginTop="-50px";
-            loging.style.marginTop="-50px";
+            navBar.style.marginTop="0";
+            navBar.style.boxShadow="none";
             main.style.padding="80px 10px";
             dropDown = false;
         }
     })
+
 }
