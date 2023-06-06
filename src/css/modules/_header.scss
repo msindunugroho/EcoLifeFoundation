@@ -6,6 +6,7 @@ header{
     padding: 10px 20px;
     position: fixed;
     z-index: 10;
+    font-family: 'Montserrat', sans-serif;
 
     nav {
         width: 100%;
@@ -20,15 +21,18 @@ header{
         .brand {
             width: max-content;
             height: 50px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             flex: 1;
             position: relative;
 
-            img {
-                height: 100%;
+            p {
+                font-size: 20px;
+                color: rgb(42, 160, 56);
             }
         }
         .nav-bar {
-            font-family: 'Montserrat', sans-serif;
             display: flex;
             flex: 3;
             justify-content: center;
