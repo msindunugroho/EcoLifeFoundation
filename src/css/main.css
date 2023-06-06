@@ -29,9 +29,8 @@ header nav .brand {
   flex: 1;
   position: relative;
 }
-header nav .brand p {
-  font-size: 20px;
-  color: rgb(42, 160, 56);
+header nav .brand img {
+  height: 95%;
 }
 header nav .nav-bar {
   display: flex;
@@ -306,6 +305,9 @@ main #jumbotron .jumbotron-body .jumbotron-btn a:last-child {
   main #jumbotron .jumbotron-body {
     padding: 0px 15px;
   }
+  main #jumbotron .jumbotron-body .jumbotron-btn a:last-child {
+    display: block;
+  }
 }
 @media (max-width: 575.98px) {
   main #jumbotron {
@@ -321,9 +323,6 @@ main #jumbotron .jumbotron-body .jumbotron-btn a:last-child {
   main #jumbotron .jumbotron-body .jumbotron-text {
     font-size: 12px;
     margin: 0 0 10px 0;
-  }
-  main #jumbotron .jumbotron-body .jumbotron-btn a:last-child {
-    display: block;
   }
 }
 main #charity {

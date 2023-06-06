@@ -75,6 +75,12 @@ main {
 
             .jumbotron-body {
                 padding: 0px 15px;
+
+                .jumbotron-btn {
+                    a:last-child {
+                        display: block;
+                    }
+                }
             }
         }
     }
@@ -96,11 +102,6 @@ main {
                 .jumbotron-text {
                     font-size: 12px;
                     margin: 0 0 10px 0;
-                }
-                .jumbotron-btn {
-                    a:last-child {
-                        display: block;
-                    }
                 }
             }
         }
